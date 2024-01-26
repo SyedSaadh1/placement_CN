@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <style>
+        body {
+            padding-top: 56px;
+            /* Adjusted padding for fixed navbar */
+            background-color: #f8f9fa;
+            /* Light background color */
+        }
+        
+        header {
+            background-color: #343a40;
+            /* Dark background color for header */
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            background-color: #ffc107;
+            /* Yellow background color */
+            color: #343a40;
+            /* Dark text color */
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        
+        .navbar-brand:hover {
+            background-color: #ffca2c;
+            /* Lighter yellow on hover */
+        }
+        
+        .navbar-nav .nav-link {
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+        
+        @media (max-width: 767px) {
+            body {
+                padding-top: 56px;
+                /* Adjusted padding for fixed navbar */
+            }
+            .navbar-toggler-icon {
+                background-color: #343a40;
+                /* Dark background color for mobile toggle */
+            }
+        }
+    </style>
+    <title>Your Page Title</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">Placement Cell</a>
+
+                <% if(locals.user) { %>
+                    <a class="navbar-brand" href="/profile">Hi, <%= locals.user.username %></a>
+                    <% } %>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/student/add-student">Add new Student</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/interview/add-interview">Add Interview</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/download">Report</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/sign-out">Signout</a>
+                                </li>
+                            </ul>
+                        </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Your content goes here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+
+</html>
